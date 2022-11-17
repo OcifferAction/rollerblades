@@ -19,6 +19,9 @@ TOKEN = os.getenv('TOKEN')
 INTERVAL = int(os.getenv('INTERVAL', 3600))
 PREROLLS = os.getenv('PREROLLS', '/config/prerolls.json')
 PRIDEMONTH = int(os.getenv('PRIDEMONTH', 1))
+DECEMBER = int(os.getenv('DECEMBER', 1))
+OCTOBER = int(os.getenv('OCTOBER', 1))
+NOVEMBER = int(os.getenv('NOVEMBER', 1))
 DEBUG = int(os.getenv('DEBUG', 0))
 
 # --- Globals ---
@@ -82,12 +85,21 @@ def main() -> None:
         if current_month == "06" and PRIDEMONTH == 1:
             # If it's June and you're supportive, use the pride month preroll
             new_preroll = my_prerolls['SPECIAL_MONTHS']['June']
+        elif current_month == "12" and DECEMBER == 1:
+            # If it's December celebrate Christmas
+            new_preroll = my_prerolls['SPECIAL_MONTHS']['December']
+        elif current_month == "11" and NOVEMBER == 1:
+            # If it's November celebrate Thanksgiving
+            new_preroll = my_prerolls['SPECIAL_MONTHS']['November']
+        elif current_month == "10" and OCTOBER == 1:
+            # If it's December celebrate Christmas
+            new_preroll = my_prerolls['SPECIAL_MONTHS']['October']    
         elif my_prerolls['HOLIDAYS'].get(todays_date) is not None:
             # If match on a holiday in the list of holidays, use that
             new_preroll = my_prerolls['HOLIDAYS'].get(todays_date)
         else:
             # otherwise use the day of the week
-            new_preroll = f'{my_prerolls["DAILYPATH"]}/{strftime("%A").lower()}.mp4'  # noqa E501
+            new_preroll = f'{my_prerolls["DAILYPATH"]}'  # noqa E501
 
         # If there's a change from the current preroll, update Plex
         if new_preroll != current_preroll:
