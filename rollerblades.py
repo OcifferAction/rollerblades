@@ -117,7 +117,7 @@ def main() -> None:
         elif current_month == "08" and AUGUST == 1:
             # If it's August
             new_preroll = my_prerolls['SPECIAL_MONTHS']['August'] 
-        elif current_month == "11" and SEPTEMBER == 1:
+        elif current_month == "09" and SEPTEMBER == 1:
             # If it's September
             new_preroll = my_prerolls['SPECIAL_MONTHS']['September']                    
         elif current_month == "10" and OCTOBER == 1:
