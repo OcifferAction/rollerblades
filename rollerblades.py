@@ -28,7 +28,6 @@ JULY = int(os.getenv('JULY', 1))
 AUGUST = int(os.getenv('AUGUST', 1))
 SEPTEMBER = int(os.getenv('SEPTEMBER', 1))
 OCTOBER = int(os.getenv('OCTOBER', 1))
-NOVEMBER = int(os.getenv('NOVEMBER', 1))
 DECEMBER = int(os.getenv('DECEMBER', 1))
 DEBUG = int(os.getenv('DEBUG', 0))
 
@@ -123,7 +122,7 @@ def main() -> None:
         elif current_month == "10" and OCTOBER == 1 and my_prerolls['SPECIAL_MONTHS']['October'] is not None:
             # If it's October
             new_preroll = my_prerolls['SPECIAL_MONTHS']['October'] 
-        elif current_month == "11" and NOVEMBER == 1 and my_prerolls['SPECIAL_MONTHS'] is not None:
+        elif current_month == "11" and NOVEMBER == 1 and (my_prerolls['SPECIAL_MONTHS']['November']) is not None:
             # If it's November
             new_preroll = my_prerolls['SPECIAL_MONTHS']['November']            
         elif current_month == "12" and DECEMBER == 1:
