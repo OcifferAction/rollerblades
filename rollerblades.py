@@ -120,10 +120,10 @@ def main() -> None:
         elif current_month == "09" and SEPTEMBER == 1:
             # If it's September
             new_preroll = my_prerolls['SPECIAL_MONTHS']['September' is not None]                    
-        elif current_month == "10" and OCTOBER == 1 and new_preroll = my_prerolls['SPECIAL_MONTHS']['October'] is not None:
+        elif current_month == "10" and OCTOBER == 1 and my_prerolls['SPECIAL_MONTHS']['October'] is not None:
             # If it's October
             new_preroll = my_prerolls['SPECIAL_MONTHS']['October'] 
-        elif current_month == "11" and NOVEMBER == 1 and new_preroll = my_prerolls['SPECIAL_MONTHS']['October'] is not None:
+        elif current_month == "11" and NOVEMBER == 1 and my_prerolls['SPECIAL_MONTHS']['November'] is not None:
             # If it's November
             new_preroll = my_prerolls['SPECIAL_MONTHS']['November']            
         elif current_month == "12" and DECEMBER == 1:
