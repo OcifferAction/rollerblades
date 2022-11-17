@@ -47,7 +47,7 @@ docker run -d \
     -v /var/docks/rollerblades:/config \
     -e HOST=plex.mynetwork.net \
     -e TOKEN=ABC123def987xyz \
-    ghcr.io/jcostom/rollerblades:latest
+    47105939/rollerblades:latest
 ```
 
 Personally, I prefer to run using `docker-compose`. I run my instance as part of a stack in Portainer, but as always, you do you. Here's an example `docker-compose` file you could use:
@@ -58,7 +58,7 @@ version: '3'
 
 services:
   rollerblades:
-    image: ghcr.io/jcostom/rollerblades:latest
+    image: 47105939/rollerblades:latest
     container_name: rollerblades
     volumes:
       - /var/docks/rollerblades:/config
