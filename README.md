@@ -14,24 +14,44 @@ This is the hardest part, and honestly, it's not hard. Go into the Plex Web UI, 
 
 ## Create your Config File
 
-This might seem a little daunting if you've never created JSON (Javascript Object Notation) formatted text before, but it's really not so bad. You'll be a pro in no time, especially if you've ever written Python code. You'll want sections for the SPECIAL_MONTHS, HOLIDAYS, and DAILYPATH areas. Here's my config for an example:
+This might seem a little daunting if you've never created JSON (Javascript Object Notation) formatted text before, but it's really not so bad. You'll be a pro in no time, especially if you've ever written Python code. You'll want sections for the SPECIAL_MONTHS, HOLIDAYS, and DAILYPATH areas. Here's the default config for an example:
 
-```json
 {
     "SPECIAL_MONTHS": {
-        "June": "/prerolls/pride.mp4"
+		"October": "/media/prerolls/Halloween_Spider.mp4;/media/prerolls/Halloween_Spooky.mp4;/media/prerolls/Halloween_Vampire_Bats.mp4;/media/prerolls/Halloween.mp4",
+		"December": "/media/prerolls/Christmas_Tree_Magic.mp4;/media/prerolls/Christmas_Tree.mp4;/media/prerolls/Christmas.mp4"
     },
     "HOLIDAYS": {
-        "0401": "/prerolls/holiday/april-fool.mp4",
-        "1225": "/prerolls/holiday/christmas.mp4",
-        "0214": "/prerolls/holiday/valentine.mp4",
-        "1031": "/prerolls/holiday/halloween.mp4"
+		"0214": "/media/prerolls/Valentine's_Day_Flowers.mp4;/media/prerolls/Valentine's_Day_Hearts.mp4"
+		"0216": "/media/prerolls/Mardi_Gras.mp4",
+		"0217": "/media/prerolls/Mardi_Gras.mp4",
+		"0218": "/media/prerolls/Mardi_Gras.mp4",
+		"0219": "/media/prerolls/Mardi_Gras.mp4",
+		"0220": "/media/prerolls/Mardi_Gras.mp4",
+		"0221": "/media/prerolls/Mardi_Gras.mp4",
+		"0222": "/media/prerolls/Mardi_Gras.mp4",
+        "0401": "/media/prerolls/April_Fools_FBI.mp4;/media/prerolls/April_Fools_PlexHub.mp4",
+		"0408": "/media/prerolls/Easter.mp4",
+		"0409": "/media/prerolls/Easter.mp4",
+		"0701": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
+		"0702": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
+		"0703": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
+		"0704": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
+		"1115": "/media/prerolls/Thanksgiving.mp4",
+		"1116": "/media/prerolls/Thanksgiving.mp4",
+		"1117": "/media/prerolls/Thanksgiving.mp4",
+		"1118": "/media/prerolls/Thanksgiving.mp4",
+		"1119": "/media/prerolls/Thanksgiving.mp4",
+		"1120": "/media/prerolls/Thanksgiving.mp4",
+		"1121": "/media/prerolls/Thanksgiving.mp4",
+		"1122": "/media/prerolls/Thanksgiving.mp4",
+		"1123": "/media/prerolls/Thanksgiving.mp4",
+		"1124": "/media/prerolls/Thanksgiving.mp4"
     },
-    "DAILYPATH": "/prerolls/daily"
+    "DAILYPATH": "/media/prerollss/Norm_Anywhere.mp4;/media/prerollss/Norm_ChrisFlix.mp4;/media/prerollss/Norm_Elegant_Short.mp4"
 }
-```
 
-Even if you're not going to do the Pride Month thing, put something in there, you can turn the feature off, I promise. More on that later when we get to the how to launch the container stuff.
+The default config has a month for Halloween and a month for Christmas. Valentine's Day and April Fools have single days. The others have multiple days that can be configured or removed.
 
 ## Launching the Container
 
@@ -45,8 +65,8 @@ docker run -d \
     --restart=unless-stopped \
     --user=1000:1000 \
     -v /var/docks/rollerblades:/config \
-    -e HOST=plex.mynetwork.net \
-    -e TOKEN=ABC123def987xyz \
+    -e HOST=*ENTER YOUR PLEX IP* \
+    -e TOKEN=*ENTER YOUR PLEX TOKEN* \
     ocifferaction/rollerblades:latest
 ```
 
@@ -63,11 +83,11 @@ services:
     volumes:
       - /var/docks/rollerblades:/config
     environment:
-      - HOST=plex.mynetwork.net
-      - TOKEN=ABC123def987xyz
+      - HOST=*ENTER YOUR PLEX IP*
+      - TOKEN=*ENTER YOUR PLEX TOKEN*
     restart: unless-stopped
     user: 1000:1000
     network_mode: bridge
 ```
 
-You'll note in both of these examples, I'm leveraging many of the defaults - https, port 32400, the 3600s sync interval, leaving Pride Month activated, default location for config file, etc. That's why so few options in use.
+You'll note in both of these examples, I'm leveraging many of the defaults - https, port 32400, the 3600s sync interval, leaving October and December activated, default location for config file, etc. That's why so few options in use.
