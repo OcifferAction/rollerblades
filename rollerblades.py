@@ -18,15 +18,6 @@ PORT = os.getenv('PORT', '32400')
 TOKEN = os.getenv('TOKEN')
 INTERVAL = int(os.getenv('INTERVAL', 3600))
 PREROLLS = os.getenv('PREROLLS', '/config/prerolls.json')
-JANUARY = int(os.getenv('JANUARY', 1))
-FEBRUARY = int(os.getenv('FEBRUARY', 1))
-MARCH = int(os.getenv('MARCH', 1))
-APRIL = int(os.getenv('APRIL', 1))
-MAY = int(os.getenv('MAY', 1))
-JUNE = int(os.getenv('JUNE', 1))
-JULY = int(os.getenv('JULY', 1))
-AUGUST = int(os.getenv('AUGUST', 1))
-SEPTEMBER = int(os.getenv('SEPTEMBER', 1))
 OCTOBER = int(os.getenv('OCTOBER', 1))
 DECEMBER = int(os.getenv('DECEMBER', 1))
 DEBUG = int(os.getenv('DEBUG', 0))
@@ -91,40 +82,10 @@ def main() -> None:
 
         if my_prerolls['HOLIDAYS'].get(todays_date) is not None:
             # If match on a holiday in the list of holidays, use that
-            new_preroll = my_prerolls['HOLIDAYS'].get(todays_date)
-        elif current_month == "01" and JANUARY == 1:
-            # If it's January
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['January']
-        elif current_month == "02" and FEBRUARY == 1:
-            # If it's February
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['February']
-        elif current_month == "03" and MARCH == 1:
-            # If it's March
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['March']
-        elif current_month == "04" and APRIL == 1:
-            # If it's April
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['April']         
-        elif current_month == "05" and MAY == 1:
-            # If it's May
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['May']
-        elif current_month == "06" and JUNE == 1:
-            # If it's June
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['June']
-        elif current_month == "07" and JULY == 1:
-            # If it's July
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['July']
-        elif current_month == "08" and AUGUST == 1:
-            # If it's August
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['August'] 
-        elif current_month == "09" and SEPTEMBER == 1:
-            # If it's September
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['September']                    
-        elif current_month == "10" and OCTOBER == 1 and my_prerolls['SPECIAL_MONTHS']['October'] is not None:
+            new_preroll = my_prerolls['HOLIDAYS'].get(todays_date)            
+        elif current_month == "10" and OCTOBER == 1:
             # If it's October
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['October'] 
-        elif current_month == "11" and NOVEMBER == 1 and (my_prerolls['SPECIAL_MONTHS']['November']) is not None:
-            # If it's November
-            new_preroll = my_prerolls['SPECIAL_MONTHS']['November']            
+            new_preroll = my_prerolls['SPECIAL_MONTHS']['October']           
         elif current_month == "12" and DECEMBER == 1:
             # If it's December
             new_preroll = my_prerolls['SPECIAL_MONTHS']['December']
