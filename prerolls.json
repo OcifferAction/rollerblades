@@ -1,16 +1,34 @@
 {
     "SPECIAL_MONTHS": {
 		"October": "/media/prerolls/Halloween_Spider.mp4;/media/prerolls/Halloween_Spooky.mp4;/media/prerolls/Halloween_Vampire_Bats.mp4;/media/prerolls/Halloween.mp4",
-		"November": "/media/prerolls/Thanksgiving.mp4",
 		"December": "/media/prerolls/Christmas_Tree_Magic.mp4;/media/prerolls/Christmas_Tree.mp4;/media/prerolls/Christmas.mp4"
     },
     "HOLIDAYS": {
-		"0216-0222": "/media/prerolls/Mardi_Gras.mp4",
+		"0214": "/media/prerolls/Valentine's_Day_Flowers.mp4;/media/prerolls/Valentine's_Day_Hearts.mp4"
+		"0216": "/media/prerolls/Mardi_Gras.mp4",
+		"0217": "/media/prerolls/Mardi_Gras.mp4",
+		"0218": "/media/prerolls/Mardi_Gras.mp4",
+		"0219": "/media/prerolls/Mardi_Gras.mp4",
+		"0220": "/media/prerolls/Mardi_Gras.mp4",
+		"0221": "/media/prerolls/Mardi_Gras.mp4",
+		"0222": "/media/prerolls/Mardi_Gras.mp4",
         	"0401": "/media/prerolls/April_Fools_FBI.mp4;/media/prerolls/April_Fools_PlexHub.mp4",
 		"0408": "/media/prerolls/Easter.mp4",
-		"1115-1125": "/media/prerolls/Thanksgiving.mp4",
-		"0701-0705": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
-        	"0214": "/media/prerolls/Valentine's_Day_Flowers.mp4;/media/prerolls/Valentine's_Day_Hearts.mp4"
+		"0409": "/media/prerolls/Easter.mp4",
+		"0701": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
+		"0702": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
+		"0703": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
+		"0704": "/media/prerollss/Independence1.mp4;/media/prerollss/Independence2.mp4",
+		"1115": "/media/prerolls/Thanksgiving.mp4",
+		"1116": "/media/prerolls/Thanksgiving.mp4",
+		"1117": "/media/prerolls/Thanksgiving.mp4",
+		"1118": "/media/prerolls/Thanksgiving.mp4",
+		"1119": "/media/prerolls/Thanksgiving.mp4",
+		"1120": "/media/prerolls/Thanksgiving.mp4",
+		"1121": "/media/prerolls/Thanksgiving.mp4",
+		"1122": "/media/prerolls/Thanksgiving.mp4",
+		"1123": "/media/prerolls/Thanksgiving.mp4",
+		"1124": "/media/prerolls/Thanksgiving.mp4"
     },
     "DAILYPATH": "/media/prerollss/Norm_Anywhere.mp4;/media/prerollss/Norm_ChrisFlix.mp4;/media/prerollss/Norm_Elegant_Short.mp4"
 }
